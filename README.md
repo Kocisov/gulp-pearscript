@@ -1,4 +1,4 @@
-# gulp-pearscript [![Build Status](https://travis-ci.org/kocisov/gulp-pearscript.svg?branch=master)](https://travis-ci.org/kocisov/gulp-pearscript)
+# gulp-pearscript [![Build Status](https://travis-ci.org/Kocisov/gulp-pearscript.svg?branch=master)](https://travis-ci.org/Kocisov/gulp-pearscript)
 
 > Gulp plugin for pearscript
 

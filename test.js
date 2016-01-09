@@ -4,7 +4,7 @@ var gutil = require('gulp-util');
 var pearscript = require('./');
 var expect = require('chai').expect;
 
-var data;
+let data;
 beforeEach(done => {
   var stream = pearscript();
 
@@ -14,9 +14,7 @@ beforeEach(done => {
   stream.write(new gutil.File({
     base: __dirname,
     path: __dirname + '/file.pear',
-    contents: new Buffer(`
-    	log."hello"
-    `)
+    contents: new Buffer("log.'hello'")
   }));
 
   stream.end();
@@ -24,7 +22,7 @@ beforeEach(done => {
 });
 
 it('should parse valid pearscript', function() {
-  expect(data.contents.toString()).to.contain('console.log("hello");');
+  expect(data.contents.toString()).to.contain("(function() {'use strict'; console.log('hello');})();");
 });
 
 it('renames to .js', () => {
