@@ -1,14 +1,13 @@
 {
   "name": "gulp-pearscript",
-  "version": "1.0.0",
+  "version": "1.0.0-1",
   "description": "Gulp plugin for pearscript",
   "license": "MIT",
-  "repository": "kocisov/gulp-pearscript",
-  "author": {
-    "name": "Ondřej Kocián",
-    "email": "kocis.34@gmail.com",
-    "url": "https://github.com/kocisov/"
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kocisov/gulp-pearscript.git"
   },
+  "author": "Ondřej Kocián <kocis.34@gmail.com> (https://github.com/kocisov/)",
   "engines": {
     "node": ">=0.10.0"
   },
@@ -29,5 +28,10 @@
   "devDependencies": {
     "chai": "^3.3.0",
     "mocha": "*"
-  }
+  },
+  "bugs": {
+    "url": "https://github.com/kocisov/gulp-pearscript/issues"
+  },
+  "homepage": "https://github.com/kocisov/gulp-pearscript#readme",
+  "main": "index.js"
 }

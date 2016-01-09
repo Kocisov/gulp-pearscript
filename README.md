@@ -21,3 +21,11 @@ gulp.task('default', function () {
 		.pipe(gulp.dest('dist'));
 });
 ```
+
+## API
+
+### pearscript()
+
+## License
+
+MIT © [Ondřej Kocián](http://ondrejkocian.cz/)
