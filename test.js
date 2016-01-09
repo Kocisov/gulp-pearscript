@@ -4,7 +4,7 @@ var gutil = require('gulp-util');
 var pearscript = require('./');
 var expect = require('chai').expect;
 
-let data;
+var data;
 beforeEach(done => {
   var stream = pearscript();
 
