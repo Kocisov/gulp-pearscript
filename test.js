@@ -22,7 +22,7 @@ beforeEach(done => {
 });
 
 it('should parse valid pearscript', function() {
-  expect(data.contents.toString()).to.contain("(function() {'use strict'; console.log('hello');})();");
+  expect(data.contents.toString()).to.contain("console.log('hello');");
 });
 
 it('renames to .js', () => {
