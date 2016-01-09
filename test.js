@@ -4,24 +4,23 @@ var gutil = require('gulp-util');
 var pearscript = require('./');
 var expect = require('chai').expect;
 
-it('should ', function (cb) {
-	var stream = pearscript();
+let data;
+beforeEach(done => {
+  var stream = pearscript();
 
-	stream.on('data', function (file) {
-		assert.strictEqual(file.contents.toString(), 'unicorns');
-	});
+  stream.on('data', file => { data = file });
+  stream.on('end', done);
 
-	stream.on('end', cb);
+  stream.write(new gutil.File({
+    base: __dirname,
+    path: __dirname + '/file.pear',
+    contents: new Buffer(`
+    	log."hello"
+    `)
+  }));
 
-	stream.write(new gutil.File({
-		base: __dirname,
-		path: __dirname + '/file.pear',
-		contents: new Buffer('
-			log."hello";
-		')
-	}));
+  stream.end();
 
-	stream.end();
 });
 
 it('should parse valid pearscript', function() {
