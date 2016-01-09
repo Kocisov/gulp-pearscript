@@ -16,7 +16,7 @@ module.exports = function (options) {
     }
 
     try {
-      var mapping = transpile(file.contents.toString(), file.relative);
+      var output = transpile(file.contents.toString(), file.relative);
 
       file.contents = new Buffer(output);
       file.path = gutil.replaceExtension(file.path, '.js');
