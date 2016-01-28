@@ -1,6 +1,6 @@
 {
   "name": "gulp-pearscript",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Gulp plugin for pearscript",
   "license": "MIT",
   "repository": {
@@ -18,7 +18,10 @@
     "index.js"
   ],
   "keywords": [
-    "gulpplugin"
+    "gulp",
+    "plugin",
+    "pearscript",
+    "compiler"
   ],
   "dependencies": {
     "pearscript": "*",
